@@ -1,3 +1,5 @@
+# тест
+
 class Vehicle:
     description = "The class for vehicle"
 
