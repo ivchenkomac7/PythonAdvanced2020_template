@@ -41,5 +41,31 @@ q.dequeue()
 print(s)
 print(q)
 
+
 class Complex:
-    pass
+    def __init__(self, real=0, imag=0):
+        self.real = real
+        self.imag = imag
+
+    def __add__(self, obj):
+        self.sum_real = self.real + obj.real
+        self.sum_imag = self.imag + obj.imag
+        return self.sum_real, self.sum_imag
+
+    def __mul__(self, obj):
+        self.mult_real = self.real * obj.real - self.imag * obj.imag
+        self.mult_imag = self.imag * obj.real + self.real * obj.real
+        return self.mult_real, self.mult_imag
+
+    def __str__(self):
+        return f'{self.real}, {self.imag}'
+
+
+x = Complex(1, 3)
+y = Complex(4, 2)
+
+sum = x + y
+mult = x * y
+
+print(f'Sum is {sum}')
+print(f'Multiple is {mult}')
