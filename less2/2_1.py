@@ -27,6 +27,9 @@ class Vehicle:
     def move(self):
         print(f"{self._model} moving...")
 
+    def __str__(self):
+        return f"Model: {self._model}, vin: {self._vin}"
+
 
 class Car(Vehicle):
 
@@ -46,10 +49,10 @@ car = Car("Ford", "zxc127625")
 
 truck = Truck("Iveco", "QW124ert")
 
+print(car)
 car.move()
 car.headlights()
-print(car.get_model())
-print(car.get_vin())
 
+print(truck)
 truck.move()
 truck.trailer()
