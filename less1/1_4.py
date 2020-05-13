@@ -9,7 +9,7 @@ def bank(p, l, t):
 
 vklad = 100000
 stavka = 20
-termin_monthes = 6
+termin_monthes = 24
 
 summ = bank(vklad, stavka, termin_monthes)
 
