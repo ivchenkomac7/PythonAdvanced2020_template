@@ -13,3 +13,4 @@ class Shop:
     def __init__(self, name_of_shop, quantity_sold):
         self._name_of_shop = name_of_shop
         self._quantity_sold = quantity_sold
+
